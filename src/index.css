@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  user-select: none;
+}
+
+/* Variables */
+
+:root {
+  /* Font Size */
+  --font-size-2xs: 0.5rem;
+  --font-size-xs: 0.75rem;   /* Tailwind default */
+  --font-size-sm: 0.875rem;  /* Tailwind default */
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+
+  /* Colors */
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+  --red: red;
+  --blue: rgb(44, 44, 175);
+}
+
+/* Styles */
+html,
+body {
+  background-color: white;
+  background-image: url('./images/pattern-curve.svg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img {
+  background: url('./images/pattern-bg.svg') center center/cover no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+
+  @media ( min-width: 1024px ) {
+    width: 120%;
+    height: 120%;
+  }
+  
+  @media ( min-width: 1280px ) {
+    width: 150%;
+    height: 150%;
+    bottom: -120px;
+    left: -60px;
+  }
+}
+
+.quote {
+  background: url('./images/pattern-quotes.svg') center center/cover no-repeat;
+  height: 3rem;
+  width: 6rem;
+  position: absolute;
+  top: 15px;
+  
+  @media ( min-width: 768px ) {
+    height: 6rem;
+    width: 12rem;
+  }
+}
+
+.hover-svg path {
+  stroke: #000;
+}
+
+footer {
+  background: url('./images/pattern-curve.svg') center center/cover no-repeat;
+}
